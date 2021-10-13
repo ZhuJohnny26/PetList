@@ -27,7 +27,6 @@ export const filterPetsThunk = (filter) => (dispatch, getState) => {
     let pets = getState()
     filter = filter.toLowerCase()
     pets = pets.filter(pet => pet.description.toLowerCase().includes(filter) || pet.title.toLowerCase().includes(filter) )
-    console.log(pets, filter)
     dispatch(filterPets(pets))
 }
 
