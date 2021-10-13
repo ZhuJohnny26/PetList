@@ -1,12 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import PetList from './PetList';
 import reportWebVitals from './reportWebVitals';
+import {Provider} from 'react-redux'
+import store from './Store'
+import PetDetail from './PetDetail';
+import {
+  BrowserRouter as Router,
+  Route
+} from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}> 
+      <Router>
+        
+        <Route exact path='/pets/:id'>
+          <PetDetail />
+        </Route>
+
+        <Route exact path='/' >
+          <PetList />
+        </Route>
+      </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,4 +1,33 @@
-.App {
+body{
+  background-color: rgb(224, 199, 169);
+}
+
+p{
+  margin: 5px;
+}
+
+h3{
+  padding: 0;
+  margin: 10px;
+}
+
+.checkboxes{
+  position:absolute;
+}
+
+a{
+  text-decoration: none;
+  color:black
+}
+
+#back-arrow{
+  margin-bottom: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +64,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
